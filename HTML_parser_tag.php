@@ -51,7 +51,20 @@ class HTML_parser_tag implements HTML_parser
        return $tag_array;
     }
 
+    public function TagPure(): string
+    {
+        $last_tag='';
+        $tag_raw=$this->TagRaw();
 
+        // выделяем имя тега
+        $tag = preg_split("/['>',' ']/", $tag_raw);
+
+        //учитываем тег если он не закрывающий
+        if (!str_starts_with($tag[0], "/")) $last_tag=$tag[0];
+
+        return $last_tag;
+    }
+    
     public function TagRaw(): string
     {
 
@@ -70,19 +83,7 @@ class HTML_parser_tag implements HTML_parser
         return $tag_raw;
     }
 
-    public function TagPure(): string
-    {
-        $last_tag='';
-        $tag_raw=$this->TagRaw();
 
-        // выделяем имя тега
-        $tag = preg_split("/['>',' ']/", $tag_raw);
-
-        //учитываем тег если он не закрывающий
-        if (!str_starts_with($tag[0], "/")) $last_tag=$tag[0];
-
-        return $last_tag;
-    }
 
     private function setHtml()
     {
