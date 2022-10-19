@@ -2,7 +2,7 @@
 
 
 namespace App;
-require "HTML_tag_raw_class.php";
+
 
 
 class HTML_tag_pure_class extends HTML_tag_raw_class
