@@ -2,7 +2,6 @@
 
 
 namespace App;
-require "HTML_class.php";
 
 
 class HTML_tag_raw_class extends HTML_class
