@@ -13,7 +13,8 @@ class HTML_class
     protected function setHtml($url)
     {
         $this->url=$url;
-        $this->html = file_get_contents($this->url);
+        
+        $this->html = file_get_contents($this->url);// или через guzzle
         $this->HTMLsize = strlen($this->html);
 
     }
