@@ -2,8 +2,7 @@
 
 
 namespace App;
-require "HTML_parser_interface.php";
-require "HTML_tag_pure_class.php";
+
 
 class HTML_tag_parser_class extends HTML_tag_pure_class implements HTML_parserInterface
 {
