@@ -4,7 +4,7 @@
 namespace App;
 
 
-class HTML_tag_parser_class extends HTML_tag_pure_class implements HTML_parserInterface
+class HTML_tag_parser_class extends HTML_tag_pure_class implements HTML_parser_interface
 {
 
     /**
