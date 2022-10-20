@@ -4,7 +4,7 @@
 namespace App;
 
 
-interface HTML_parserInterface
+interface HTML_parser_interface
 {
     public function parser(string $url);
 }
