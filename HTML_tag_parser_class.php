@@ -15,7 +15,7 @@ class HTML_tag_parser_class extends HTML_tag_pure_class implements HTML_parser_i
     public function parser($url): array
     {
         $this->setHtml($url);
-
+        $tag_array='';
 
         while(($result = $this->TagPure())['status'] == 'success')
         {
