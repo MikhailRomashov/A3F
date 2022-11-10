@@ -2,7 +2,9 @@
 
 
 namespace App\A3Ftest;
-
+use Exception;
+use Psr\Cache\CacheItemPoolInterface;
+use Psr\Log\LoggerInterface;
 
 class HTML_class
 {
